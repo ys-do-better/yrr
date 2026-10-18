@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>LifeCanvas · 记录生活的每一个瞬间</title>
+    <meta name="description" content="LifeCanvas 是一个把照片、成长、心情、健康、家人与阅读收进同一张画布的个人生活记录空间。" />
+    <meta name="theme-color" content="#FAF8F5" />
+    <meta name="color-scheme" content="light" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="LifeCanvas" />
+    <meta name="application-name" content="LifeCanvas" />
+    <link rel="canonical" href="https://ys-do-better.github.io/yrr/" />
+    <link rel="icon" href="/yrr/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" href="/yrr/icons/icon-192.png" sizes="192x192" />
+    <link rel="apple-touch-icon" href="/yrr/icons/apple-touch-icon.png" />
+    <link rel="manifest" href="/yrr/manifest.webmanifest" />
+    <link rel="preconnect" href="https://skbfmevykzxbumtflusf.supabase.co" crossorigin />
+    <link rel="dns-prefetch" href="//skbfmevykzxbumtflusf.supabase.co" />
+    <link rel="preload" href="/yrr/_expo/static/js/web/entry-e0c413aef750043b391101c214c3ba7d.js" as="script" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="LifeCanvas" />
+    <meta property="og:locale" content="zh_CN" />
+    <meta property="og:title" content="LifeCanvas · 记录生活的每一个瞬间" />
+    <meta property="og:description" content="LifeCanvas 是一个把照片、成长、心情、健康、家人与阅读收进同一张画布的个人生活记录空间。" />
+    <meta property="og:url" content="https://ys-do-better.github.io/yrr/" />
+    <meta property="og:image" content="https://ys-do-better.github.io/yrr/og-cover.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="LifeCanvas · 把生活的每个侧面，收进一张画布" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="LifeCanvas · 记录生活的每一个瞬间" />
+    <meta name="twitter:description" content="LifeCanvas 是一个把照片、成长、心情、健康、家人与阅读收进同一张画布的个人生活记录空间。" />
+    <meta name="twitter:image" content="https://ys-do-better.github.io/yrr/og-cover.png" />
+
+    <style>
+      :root { color-scheme: light; }
+      html, body { height: 100%; }
+      html { -webkit-text-size-adjust: 100%; }
+      body {
+        margin: 0;
+        overflow: hidden;
+        background: #FAF8F5;
+        color: #1C1B1F;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+          "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -webkit-tap-highlight-color: transparent;
+        overscroll-behavior-y: none;
+      }
+      #root { display: flex; height: 100%; flex: 1; }
+      * { box-sizing: border-box; }
+      input, textarea, button { font-family: inherit; }
+      input:focus, textarea:focus { outline: none; }
+      ::selection { background: #FFE0BF; }
+      :focus-visible { outline: 2px solid #5B6FE0; outline-offset: 2px; }
+
+      #boot-splash {
+        position: fixed;
+        inset: 0;
+        z-index: 9999;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 24px;
+        background:
+          radial-gradient(58% 48% at 18% 12%, #F6D7BA 0%, rgba(246, 215, 186, 0) 62%),
+          radial-gradient(55% 50% at 88% 92%, #DDE2F8 0%, rgba(221, 226, 248, 0) 66%),
+          #FAF8F5;
+        transition: opacity 0.35s ease;
+      }
+      #boot-splash.boot--hide { opacity: 0; pointer-events: none; }
+      .boot-inner { display: flex; flex-direction: column; align-items: center; text-align: center; }
+      .boot-mark {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 5px;
+        width: 64px;
+        height: 64px;
+        padding: 12px;
+        border-radius: 18px;
+        background: #FFFFFF;
+        box-shadow: 0 8px 32px rgba(28, 27, 31, 0.1);
+      }
+      .boot-mark span { border-radius: 4px; }
+      .boot-mark span:nth-child(1) { background: #FF8200; }
+      .boot-mark span:nth-child(2) { background: #5B6FE0; }
+      .boot-mark span:nth-child(3) { background: #5DB87A; }
+      .boot-mark span:nth-child(4) { background: #E08594; }
+      .boot-name {
+        margin-top: 18px;
+        font-size: 24px;
+        font-weight: 700;
+        letter-spacing: -0.5px;
+        color: #1C1B1F;
+      }
+      .boot-tagline { margin-top: 6px; font-size: 13px; color: #6E6A70; }
+      .boot-spinner {
+        width: 22px;
+        height: 22px;
+        margin-top: 22px;
+        border: 2px solid #E8E4DE;
+        border-top-color: #5B6FE0;
+        border-radius: 50%;
+        animation: boot-spin 0.8s linear infinite;
+      }
+      .boot-hint { margin-top: 12px; font-size: 12px; color: #9A979C; }
+      .boot-retry {
+        margin-top: 10px;
+        font-size: 13px;
+        color: #5B6FE0;
+        font-weight: 600;
+        text-decoration: none;
+      }
+      @keyframes boot-spin { to { transform: rotate(360deg); } }
+      .noscript {
+        position: fixed;
+        inset: 0;
+        z-index: 10000;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 32px;
+        background: #FAF8F5;
+        text-align: center;
+      }
+      .noscript h1 { font-size: 22px; margin: 0 0 10px; }
+      .noscript p { margin: 0; font-size: 14px; line-height: 1.7; color: #66626A; }
+      @media (prefers-reduced-motion: reduce) {
+        .boot-spinner { animation: none; }
+        #boot-splash { transition: none; }
+      }
+      @media (max-width: 420px) {
+        .boot-name { font-size: 22px; }
+      }
+    </style>
+  </head>
+
+  <body>
+    <noscript>
+      <style>#boot-splash { display: none; }</style>
+      <div class="noscript">
+        <h1>需要开启 JavaScript</h1>
+        <p>LifeCanvas 需要 JavaScript 才能打开你的生活画布。<br />请在浏览器设置中开启后刷新页面。</p>
+      </div>
+    </noscript>
+
+    <div id="root"></div>
+
+    <div id="boot-splash" role="status" aria-live="polite">
+      <div class="boot-inner">
+        <div class="boot-mark" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+        <div class="boot-name">LifeCanvas</div>
+        <div class="boot-tagline">记录生活的每一个瞬间</div>
+        <div class="boot-spinner" aria-hidden="true"></div>
+        <div class="boot-hint" id="boot-hint">正在打开你的画布…</div>
+        <a class="boot-retry" id="boot-retry" href="" hidden>重新加载</a>
+      </div>
+    </div>
+
+    <script>
+      window.setTimeout(function () {
+        var hint = document.getElementById('boot-hint');
+        var retry = document.getElementById('boot-retry');
+        if (hint) hint.textContent = '加载时间有点久，请检查网络后重试';
+        if (retry) retry.hidden = false;
+      }, 12000);
+    </script>
+    <script src="/yrr/_expo/static/js/web/entry-e0c413aef750043b391101c214c3ba7d.js" defer></script>
+  </body>
+</html>
